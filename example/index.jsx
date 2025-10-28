@@ -3,13 +3,13 @@ import ReactDom from "react-dom";
 import { DialogAuth, BoxAuth, FullWidthAuth } from "../src";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Box from "@material-ui/core/Box";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import HomeIcon from "@material-ui/icons/HomeOutlined";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: "#007fff",
@@ -33,13 +33,13 @@ const App = () => {
   const [open, setOpen] = React.useState(true);
 
   const handleSignIn = async ({ email, password }) => {
-    await wait("SignIn");
+    await wait(`SignIn ('${email}', '${password}')`);
   };
   const handleSignUp = async ({ email, name, password }) => {
-    await wait("SignUp");
+    await wait(`SignUp ('${email}', '${name}', '${password}')`);
   };
   const handleForget = async ({ email }) => {
-    await wait("Forget");
+    await wait(`Forget ('${email}')`);
   };
 
   if (mode == 0)
@@ -117,9 +117,6 @@ ReactDom.render(
       >
         <HomeIcon color="action" />
       </IconButton>
-      <Typography variant="caption" color="textSecondary">
-        <b>Made By Arpit</b>
-      </Typography>
     </div>
     <App />
   </ThemeProvider>,

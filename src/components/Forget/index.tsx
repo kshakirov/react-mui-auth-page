@@ -32,8 +32,11 @@ const Forget: React.FC<ForgetProps & NaviProps> = ({
     if (!checkValid(email, setEmail, emailValidator)) return;
     if (typeof handleForget !== "function") handleForget = () => {};
     setLoading(true);
-    return handleForget({ email: email.text });
-  }, []);
+    await handleForget({ email: email.text });
+    setEmail(INITIAL);
+    setLoading(false);
+  }, [email, emailValidator]);
+
   return (
     <>
       <IconButton aria-label="go back" onClick={gobackToSignIn}>
@@ -54,6 +57,7 @@ const Forget: React.FC<ForgetProps & NaviProps> = ({
             variant="contained"
             color="primary"
             fullWidth
+            disabled={loading}
           >
             Reset my Password
           </Button>

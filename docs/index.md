@@ -41,16 +41,6 @@ import { DialogAuth, BoxAuth, FullWidthAuth } from "react-mui-auth-page";
 | Facebook  | Function |
 | Twitter   | Function |
 
-## ScreenShots
-
-**With Tabs**
-
-<img src='./example/Dialog with Tabs.png'>
-
-**WithOut Tabs**
-
-<img src='./example/Dialog without Tabs.png'>
-
 #### Dialog
 
 ```js
@@ -104,7 +94,3 @@ npm run dev
 
 - Pull requests are welcome!
 - Submit github issues for any feature enhancements, bugs or documentation problems
-
-## Maintainer
-
-[arpitBhalla](https://github.com/arpitbhalla)

@@ -93,21 +93,7 @@ npm install
 npm run dev
 ```
 
-## ScreenShots
-
-**With Tabs**
-
-<img src='./example/Dialog with Tabs.png' width='70%'>
-
-**WithOut Tabs**
-
-<img src='./example/Dialog without Tabs.png' width='70%'>
-
 ## Get Involved!
 
 - Pull requests are welcome!
 - Submit github issues for any feature enhancements, bugs or documentation problems
-
-## Maintainer
-
-[arpitBhalla](https://github.com/arpitbhalla)
